@@ -39,3 +39,25 @@ std::string Polynom::to_string()
     }
     return ss.str();
 }
+
+Polynom Polynom::operator+(const Polynom &right) const
+{
+    Polynom p(*this);
+    for (auto k : right.terms) {
+        int exp = k.first;
+        int mult = k.second;
+        p.addTerm(mult, exp);
+    }
+    return p;
+}
+
+Polynom Polynom::operator-(const Polynom &right) const
+{
+    Polynom p(*this);
+    for (auto k : right.terms) {
+        int exp = k.first;
+        int mult = k.second;
+        p.addTerm(-mult, exp);
+    }
+    return p;
+}

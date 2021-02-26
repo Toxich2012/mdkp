@@ -14,6 +14,9 @@ public:
     double eval(int x);
     std::string to_string();
 
+    Polynom operator+(const Polynom &right) const;
+    Polynom operator-(const Polynom &right) const;
+
 private:
     std::map<int, int> terms;
 };
