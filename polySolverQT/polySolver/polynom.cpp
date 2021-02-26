@@ -29,6 +29,10 @@ std::string Polynom::to_string()
         int exp = k.first;
         int mult = k.second;
 
+        if (mult == 0) {
+            continue;
+        }
+
         ss << (mult >= 0? "+" : "") << mult;
         if (exp == 1) {
             ss << "x";
@@ -37,7 +41,7 @@ std::string Polynom::to_string()
             ss << "x^" << exp << "";
         }
     }
-    return ss.str();
+    return ss.str().length() > 0? ss.str() : "0";
 }
 
 Polynom Polynom::derive() const
