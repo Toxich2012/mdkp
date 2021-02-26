@@ -40,6 +40,20 @@ std::string Polynom::to_string()
     return ss.str();
 }
 
+Polynom Polynom::derive() const
+{
+    Polynom p;
+    for (auto k : terms) {
+        int exp = k.first;
+        int mult = k.second;
+        if (exp == 0) {
+            continue;
+        }
+        p.addTerm(mult*exp, exp-1);
+    }
+    return p;
+}
+
 Polynom Polynom::operator+(const Polynom &right) const
 {
     Polynom p(*this);
