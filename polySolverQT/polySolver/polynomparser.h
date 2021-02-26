@@ -8,9 +8,6 @@ class PolynomParser
 {
 public:
     explicit PolynomParser(const std::string &polynomStr);
-    char peek(int rel_pos=0);
-    char get();
-    int parseNum();
     Polynom parse();
 
 private:
@@ -18,6 +15,10 @@ private:
     std::string polynomStr;
     int pos = 0;
     int ENOS;
+
+    char peek(int rel_pos=0);
+    char get();
+    int parseNum();
 };
 
 
