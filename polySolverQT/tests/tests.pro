@@ -6,4 +6,9 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES +=  tst_test.cpp
+SOURCES +=  tst_test.cpp \
+            ..\polySolver\polynom.cpp \
+            ..\polySolver\polynomparser.cpp
+
+HEADERS +=  ..\polySolver\polynom.h \
+            ..\polySolver\polynomparser.h
