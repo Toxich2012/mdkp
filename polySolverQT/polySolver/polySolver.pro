@@ -11,11 +11,13 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    polynom.cpp
+    polynom.cpp \
+    polynomparser.cpp
 
 HEADERS += \
     mainwindow.h \
-    polynom.h
+    polynom.h \
+    polynomparser.h
 
 FORMS += \
     mainwindow.ui
