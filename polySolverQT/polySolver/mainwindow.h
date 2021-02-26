@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QClipboard>
+
+#include "polynom.h"
+#include "polynomparser.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +22,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void sumPolynoms();
+    void subPolynoms();
+    void mulPolynoms();
+    void derivePolynom();
+    void solvePolynomForX();
+    void copyResult();
 };
 #endif // MAINWINDOW_H
