@@ -1,10 +1,9 @@
 #ifndef POLYNOM_H
 #define POLYNOM_H
 
-#include <QString>
+#include <sstream>
 #include <map>
-
-
+#include <cmath>
 
 class Polynom
 {
