@@ -11,7 +11,7 @@ public:
     Polynom();
 
     void addTerm(int mul, int exp);
-    double eval(int x);
+    double eval(double x);
     std::string to_string();
 
     Polynom derive() const;

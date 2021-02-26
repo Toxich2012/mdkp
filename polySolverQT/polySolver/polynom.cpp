@@ -10,7 +10,7 @@ void Polynom::addTerm(int mul, int exp)
     terms[exp] += mul;
 }
 
-double Polynom::eval(int x)
+double Polynom::eval(double x)
 {
     double out = 0;
     for (auto k : terms) {
