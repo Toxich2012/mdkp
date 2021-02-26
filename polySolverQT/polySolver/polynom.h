@@ -2,6 +2,7 @@
 #define POLYNOM_H
 
 #include <QString>
+#include <map>
 
 
 
@@ -10,15 +11,12 @@ class Polynom
 public:
     Polynom();
 
-    Polynom* parse(QString polyStr);
-
-    double solve(double value);
-    Polynom add(Polynom *other);
-    Polynom sub(Polynom *other);
+    void addTerm(int mul, int exp);
+    double eval(int x);
+    std::string to_string();
 
 private:
-    QString polyStr;
-    QMap<int, int> terms();
+    std::map<int, int> terms;
 };
 
 #endif // POLYNOM_H
