@@ -35,6 +35,9 @@ Polynom PolynomParser::parse()
         }
         else if (c == '+' || c == '-') {
             char sign = get();
+            if (peek() == 'x') {
+                continue;
+            }
             int num = this->parseNum();
             num *= sign == '+'? 1 : -1;
             latNum = num;
