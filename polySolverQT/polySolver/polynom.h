@@ -17,6 +17,7 @@ public:
     Polynom derive() const;
     Polynom operator+(const Polynom &right) const;
     Polynom operator-(const Polynom &right) const;
+    Polynom operator*(const Polynom &right) const;
 
 private:
     std::map<int, int> terms;

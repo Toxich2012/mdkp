@@ -75,3 +75,18 @@ Polynom Polynom::operator-(const Polynom &right) const
     }
     return p;
 }
+
+Polynom Polynom::operator*(const Polynom &right) const
+{
+    Polynom p;
+    for (auto kL : terms) {
+        int expL = kL.first;
+        int multL = kL.second;
+        for (auto kR : right.terms) {
+            int expR = kR.first;
+            int multR = kR.second;
+            p.addTerm(multL*multR, expL+expR);
+        }
+    }
+    return p;
+}
